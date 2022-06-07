@@ -15,9 +15,9 @@ public class SupplierExample {
 
     public static void main(String[] args) {
 
-        List<Person> personList = PersonRepository.getAllPersons();
+      //  List<Person> personList = PersonRepository.getAllPersons();
 
-    //    System.out.println(" Result  : "+s1.get());
-        System.out.println(" Result  : "+s2.get());
+    //    System.out.println(" Result  1: "+s1.get());
+        System.out.println(" Result  2: "+s2.get());
     }
 }
