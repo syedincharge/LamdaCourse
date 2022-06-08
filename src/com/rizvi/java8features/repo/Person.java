@@ -2,6 +2,7 @@ package com.rizvi.java8features.repo;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 
 public class Person {
     private String name;
@@ -10,7 +11,9 @@ public class Person {
     private String gender;
     private  int kids;
     List<String> hobbies = new ArrayList<>();
+    Optional<Address> address;
 
+    public Person(){super();}
     public Person(String name, int height, double salary, String gender, int kids, List<String> hobbies) {
         this.name = name;
         this.height = height;
@@ -18,6 +21,14 @@ public class Person {
         this.gender = gender;
         this.kids = kids;
         this.hobbies = hobbies;
+    }
+
+    public Optional<Address> getAddress() {
+        return address;
+    }
+
+    public void setAddress(Optional<Address> address) {
+        this.address = address;
     }
 
     public String getName() {
