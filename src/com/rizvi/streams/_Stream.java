@@ -21,8 +21,8 @@ public class _Stream {
                 new Person("John", MALE),
                 new Person("Maria", FEMALE),
                 new Person("Aisha", FEMALE),
-                new Person("Alice", FEMALE),
-                new Person("Alex", MALE));
+                new Person("Alex", MALE),
+                new Person("Alice", FEMALE));
 
         people.stream()
                 .map(person -> person.gender)
@@ -31,7 +31,7 @@ public class _Stream {
 
         Function<Person, String> getPersonStringFunction = person -> person.name;
         ToIntFunction<String> length = String::length;
-        IntConsumer println = x -> System.out.println(x);
+        IntConsumer println = System.out::println;
         people.stream()
                 .map(getPersonStringFunction())
                 .mapToInt(length)
